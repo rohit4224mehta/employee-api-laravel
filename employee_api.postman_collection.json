@@ -1,0 +1,164 @@
+{
+    "info": {
+        "name": "Employee API (Day 6)",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get API Token",
+            "request": {
+                "method": "POST",
+                "url": "http://127.0.0.1:8000/api/sanctum/token",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"email\": \"rohit@example.com\", \"password\": \"password123\"}",
+                    "options": { "raw": { "language": "json" } }
+                }
+            }
+        },
+        {
+            "name": "Get All Employees (Paginated)",
+            "request": {
+                "method": "GET",
+                "url": "http://127.0.0.1:8000/api/employees?page=1",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Get Employees by Position",
+            "request": {
+                "method": "GET",
+                "url": "http://127.0.0.1:8000/api/employees?position=Developer",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Create Employee",
+            "request": {
+                "method": "POST",
+                "url": "http://127.0.0.1:8000/api/employees",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Rohit Mehta\", \"email\": \"rohit.mehta@example.com\", \"position\": \"Developer\", \"salary\": 50000}",
+                    "options": { "raw": { "language": "json" } }
+                }
+            }
+        },
+        {
+            "name": "Create Employee (Validation Error)",
+            "request": {
+                "method": "POST",
+                "url": "http://127.0.0.1:8000/api/employees",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"\", \"email\": \"rohit@example.com\", \"position\": \"\", \"salary\": -10}",
+                    "options": { "raw": { "language": "json" } }
+                }
+            }
+        },
+        {
+            "name": "Get Employee by ID",
+            "request": {
+                "method": "GET",
+                "url": "http://127.0.0.1:8000/api/employees/1",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Get Employee by ID (Not Found)",
+            "request": {
+                "method": "GET",
+                "url": "http://127.0.0.1:8000/api/employees/999",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Update Employee",
+            "request": {
+                "method": "PUT",
+                "url": "http://127.0.0.1:8000/api/employees/1",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Rohit Mehta\", \"email\": \"rohit.mehta@example.com\", \"position\": \"Senior Developer\", \"salary\": 60000}",
+                    "options": { "raw": { "language": "json" } }
+                }
+            }
+        },
+        {
+            "name": "Delete Employee",
+            "request": {
+                "method": "DELETE",
+                "url": "http://127.0.0.1:8000/api/employees/1",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Unauthenticated Request",
+            "request": {
+                "method": "GET",
+                "url": "http://127.0.0.1:8000/api/employees"
+            }
+        }
+    ]
+}
