@@ -63,11 +63,11 @@
 
 ## 🌍 Live Demo
 
-<a href="https://employee-api.onrender.com" target="_blank">
+<a href="https://employee-api-laravel.onrender.com" target="_blank">
   <img src="https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen?style=for-the-badge&logo=vercel" alt="Live Demo">
 </a>
 
-- **API Base URL:** `https://employee-api.onrender.com/api`
+- **API Base URL:** `https://employee-api-laravel.onrender.com`
 - **Admin Panel:** `https://employee-api.onrender.com/employees` *(login required)*
 
 ---
