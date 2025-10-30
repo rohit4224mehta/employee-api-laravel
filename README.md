@@ -1,11 +1,11 @@
-<a href="https://github.com/rohitmehta/employee-api" target="_blank">
+<a href="https://github.com/rohit4224mehta/employee-api-laravel" target="_blank">
   <img src="https://img.shields.io/github/stars/rohitmehta/employee-api?style=social" alt="GitHub Stars">
 </a>
 <a href="https://laravel.com" target="_blank">
   <img src="https://img.shields.io/badge/Laravel-10-ff2d20?logo=laravel&logoColor=white" alt="Laravel 10">
 </a>
-<a href="https://github.com/rohitmehta/employee-api/blob/main/LICENSE" target="_blank">
-  <img src="https://img.shields.io/github/license/rohitmehta/employee-api" alt="License">
+<a href="https://github.com/rohit4224mehta/employee-api-laravel/blob/main/LICENSE" target="_blank">
+  <img src="https://img.shields.io/github/license/rohit4224mehta/employee-api-laravel" alt="License">
 </a>
 
 ---
@@ -63,11 +63,11 @@
 
 ## 🌍 Live Demo
 
-<a href="https://employee-api-laravel.onrender.com" target="_blank">
+<a href="https://employee-api-laravel-1.onrender.com" target="_blank">
   <img src="https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen?style=for-the-badge&logo=vercel" alt="Live Demo">
 </a>
 
-- **API Base URL:** `https://employee-api-laravel.onrender.com`
+- **API Base URL:** `https://employee-api-laravel-1.onrender.com`
 - **Admin Panel:** `https://employee-api.onrender.com/employees` *(login required)*
 
 ---
@@ -76,5 +76,5 @@
 
 ### 🧩 1. Clone Repository
 ```bash
-git clone https://github.com/rohitmehta/employee-api.git
+git clone https://github.com/rohit4224mehta/employee-api-laravel.git
 cd employee-api
